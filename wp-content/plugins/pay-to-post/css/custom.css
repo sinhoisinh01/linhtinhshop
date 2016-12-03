@@ -1,0 +1,36 @@
+#add_funds_table td {
+  border: none; }
+#add_funds_table th {
+  background: inherit;
+  width: 5em;
+  padding-left: 10px;
+  margin: 0;
+  border: none; }
+#add_funds_table .table_description {
+  font-size: 0.7em;
+  position: relative;
+  top: -1em; }
+
+#payment-form-container {
+  background-color: white;
+  border: 1px solid #bbbbbb;
+  border-radius: 6px;
+  max-width: 400px; }
+
+.confirm-submit {
+  float: right;
+  width: 150px;
+  margin-top: 10px; }
+
+.currency-input {
+  text-align: right; }
+
+#ptp-transactions-table .align-right {
+  text-align: right; }
+
+.well.well-sm.pay-error {
+  background-color: #ffb5b5; }
+.well.well-sm.pay-warning {
+  background-color: #b5ffb5; }
+
+/*# sourceMappingURL=custom.css.map */

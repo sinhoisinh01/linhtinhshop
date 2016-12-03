@@ -1,0 +1,55 @@
+#add_funds_table{
+	td{
+		border:none;
+	}
+	th{
+		background:inherit;
+		width:5em;
+		padding-left:10px;
+		margin:0;
+		border:none;
+	}
+	.table_description{
+		font-size:0.7em;
+		position:relative;
+		top:-1em;
+	}
+}
+
+#payment-form-container{
+	background-color:white;
+	border:1px solid rgb(187,187,187);
+	border-radius:6px;
+	max-width:400px;
+}
+
+.confirm-submit{
+	float:right;
+	width:150px;
+	margin-top:10px;
+}
+
+.currency-input{
+	text-align:right;
+}
+
+#ptp-transactions-table{
+	.align-right{
+		text-align:right;
+	}
+}
+
+.well{
+	&.well-sm{
+		//line-height:0.7em;
+		//padding:10px 5px 0 5px;
+		&.pay-error{
+			background-color:rgb(255,181,181);
+		}
+		&.pay-warning{
+			background-color:rgb(181,255,181);
+		}
+	}
+}
+
+
