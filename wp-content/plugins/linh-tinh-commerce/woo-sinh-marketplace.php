@@ -10,17 +10,21 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 if ( ! class_exists('Woo_Sinh_Marketplace') ) {
 	class Woo_Sinh_Marketplace {
 		public function __construct() {		
-			// When create a user, system auto generate a post for a another user can rate or review.
-			add_action( 'wp_head', array($this, 'sinh_auto_create_post') );
+			// In the user's first login, system auto generate a post for a another user can rate or review.
+			//add_action( 'wp_login', array($this, 'sinh_auto_create_post') ); Thử xem vừa đăng ký có tạo ko
+			//add_action( 'wp_head', array($this, 'sinh_auto_create_post') );
+			$this->sinh_auto_create_post();
 		}
 		
 		function sinh_auto_create_post() {
 			global $current_user;
 			get_currentuserinfo();
+			$category = get_category_by_slug( 'user-rating' );
 			$user_post = array(
 				'post_title' 	=> $current_user->display_name,
 				'post_status' 	=> 'publish',
-				'post_category' => array('user-rating')
+				'post_content'	=> '[ratings]',
+				'post_category' => array( $category->term_id )
 			);
 
 			if ( $this->get_post_by_title($user_post['post_title']) == null ) {
