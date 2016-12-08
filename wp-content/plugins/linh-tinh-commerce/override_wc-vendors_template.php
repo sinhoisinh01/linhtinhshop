@@ -6,26 +6,10 @@ function myplugin_plugin_path() {
   return untrailingslashit( plugin_dir_path( __FILE__ ) );
  
 }
- 
- 
- 
-add_filter( 'woocommerce_locate_template', 'myplugin_woocommerce_locate_template', 10, 3 );
- 
- 
- 
-function myplugin_woocommerce_locate_template( $template, $template_name, $template_path ) {
- 
-  global $woocommerce;
- 
-  $_template = $template;
- 
-  if ( ! $template_path ) $template_path = $woocommerce->template_url;
 
-  $plugin_path  = myplugin_plugin_path() . '/templates/woocommerce/';
- 
- 
- 
-  // Look within passed path within the theme - this is priority
+function sinh_override_wc_vendors_template() {
+	$plugin_path = myplugin_plugin_path() . '/templates/wc-vendors';
+	// Look within passed path within the theme - this is priority
  
   $template = locate_template(
  
@@ -62,3 +46,4 @@ function myplugin_woocommerce_locate_template( $template, $template_name, $templ
   return $template;
  
 }
+add_action( 'template_include', 'sinh_override_wc_vendors_template' );

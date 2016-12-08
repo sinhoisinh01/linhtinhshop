@@ -76,7 +76,7 @@ jQuery(function () {
 			$shipped = in_array($user_id, $shippers);
 			
 			?>
-
+			
 			<tr id="order-<?php echo $order->id; ?>" data-order-id="<?php echo $order->id; ?>">
 				<td><?php echo $order->get_order_number(); ?></td>
 				<td><?php echo apply_filters( 'wcvendors_dashboard_google_maps_link', '<a target="_blank" href="' . esc_url( 'http://maps.google.com/maps?&q=' . urlencode( esc_html( preg_replace( '#<br\s*/?>#i', ', ', $order->get_formatted_shipping_address() ) ) ) . '&z=16' ) . '">'. esc_html( preg_replace( '#<br\s*/?>#i', ', ', $order->get_formatted_shipping_address() ) ) .'</a>' ); ?></td>

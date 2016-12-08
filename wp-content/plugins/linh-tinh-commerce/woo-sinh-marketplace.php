@@ -10,7 +10,8 @@ if ( !defined( 'linh_tinh_commerce_dir' ) )
 	define( 'linh_tinh_commerce_dir', trailingslashit( dirname( __FILE__ ) ) );
 
 // Override Woocomerce template
-require_once(linh_tinh_commerce_dir . 'override_woocommerce_template.php');
+require_once( linh_tinh_commerce_dir . 'override_woocommerce_template.php' );
+require_once( trailingslashit( dirname( __FILE__ ) ) . 'rating_report_page.php' );
 
 if ( ! class_exists('Woo_Sinh_Marketplace') ) {
 	class Woo_Sinh_Marketplace {
