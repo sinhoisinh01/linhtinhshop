@@ -1,4 +1,6 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
 function myplugin_plugin_path() {
  
   // gets the absolute path to this plugin directory

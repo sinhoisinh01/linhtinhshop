@@ -42,7 +42,7 @@ jQuery(function () {
 	<thead>
 	<tr>
 	<th class="product-header"><?php _e( 'Order', 'wcvendors' ); ?></th>
-	<th class="quantity-header"><?php _e( 'Shipping', 'wcvendors' ) ?></th>
+	<th class="quantity-header"><?php _e( 'Shipping Information', 'wcvendors' ) ?></th>
 	<th class="commission-header"><?php _e( 'Total', 'wcvendors' ) ?></th>
 	<th class="rate-header"><?php _e( 'Date', 'wcvendors' ) ?></th>
 	<th class="rate-header"><?php _e( 'Links', 'wcvendors' ) ?></th>
@@ -76,10 +76,15 @@ jQuery(function () {
 			$shipped = in_array($user_id, $shippers);
 			
 			?>
-			
+			<?php $order_meta = sinh_get_order_meta( $order->id )?>
 			<tr id="order-<?php echo $order->id; ?>" data-order-id="<?php echo $order->id; ?>">
 				<td><?php echo $order->get_order_number(); ?></td>
-				<td><?php echo apply_filters( 'wcvendors_dashboard_google_maps_link', '<a target="_blank" href="' . esc_url( 'http://maps.google.com/maps?&q=' . urlencode( esc_html( preg_replace( '#<br\s*/?>#i', ', ', $order->get_formatted_shipping_address() ) ) ) . '&z=16' ) . '">'. esc_html( preg_replace( '#<br\s*/?>#i', ', ', $order->get_formatted_shipping_address() ) ) .'</a>' ); ?></td>
+				<td><?php 
+					echo '<strong>Person Name: </strong>' . sinh_get_shipping_person_name( $order_meta ) . '</br>';
+					echo '<strong>Shipping Adress: </strong><a href="' . sinh_get_google_map_shipping_address( $order_meta ) . '" target="_blank">' . sinh_get_shipping_address( $order_meta ) . '</a></br>';
+					echo '<strong>Shipping Phone: </strong>' . sinh_get_shipping_phone( $order_meta ) . '</br>';
+					echo '<a class="btn btn-success" href="' . sinh_get_user_rating_link( $order_meta ) . '" target="_blank">Rate Customer</a>';
+				?></td>
 				<td><?php $sum = WCV_Queries::sum_for_orders( array( $order->id ), array('vendor_id'=>get_current_user_id()) ); $total = $sum[0]->line_total; $totals += $total; echo woocommerce_price( $total ); ?></td>
 				<td><?php echo $order->order_date; ?></td>
 				<td>

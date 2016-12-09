@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // add bootstrap for wp_admin
 function sinh_add_bootstrap() {

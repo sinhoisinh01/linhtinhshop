@@ -11,7 +11,7 @@ if ( !defined( 'linh_tinh_commerce_dir' ) )
 
 // Override Woocomerce template
 require_once( linh_tinh_commerce_dir . 'override_woocommerce_template.php' );
-require_once( trailingslashit( dirname( __FILE__ ) ) . 'rating_report_page.php' );
+require_once( linh_tinh_commerce_dir . 'rating_report_page.php' );
 
 if ( ! class_exists('Woo_Sinh_Marketplace') ) {
 	class Woo_Sinh_Marketplace {
@@ -121,3 +121,5 @@ function Woo_Sinh_Marketplace_load() {
 }
 add_action( 'plugins_loaded', 'Woo_Sinh_Marketplace_load' );
 add_shortcode( 'sinh_view_rating', array('Woo_Sinh_Marketplace', 'sinh_create_view_ratings_shortcode') );
+
+require_once( linh_tinh_commerce_dir . 'orders_information.php' );
