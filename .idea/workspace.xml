@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d63e59b3-2827-4235-8e6f-0ad6b19bd78f" name="Default" comment="" />
+    <list default="true" id="d63e59b3-2827-4235-8e6f-0ad6b19bd78f" name="Default" comment="">
+      <change type="DELETED" beforePath="D:\Software\Xampp\htdocs\linhtinhshop\wp-content\plugins\Disable-Users-master.zip" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/Disable-Users-master/init.php" afterPath="$PROJECT_DIR$/wp-content/plugins/Disable-Users-master/init.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/Disable-Users-master/readme.txt" afterPath="$PROJECT_DIR$/wp-content/plugins/Disable-Users-master/readme.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="LinhTinhShop.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -25,8 +30,8 @@
       <file leaf-file-name="B-linh-tinh-lock.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/plugins/B-linh-tinh-lock/B-linh-tinh-lock.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.8461537">
-              <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -35,7 +40,7 @@
       <file leaf-file-name="functions.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/alpha-store/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.901894">
+            <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <marker date="1480945490289" expanded="true" signature="2387:2405" placeholder="..." />
@@ -98,8 +103,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -108,112 +111,10 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LinhTinhShop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LinhTinhShop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LinhTinhShop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LinhTinhShop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LinhTinhShop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LinhTinhShop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LinhTinhShop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LinhTinhShop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alpha-store" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LinhTinhShop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LinhTinhShop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LinhTinhShop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LinhTinhShop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="B-linh-tinh-lock" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -268,7 +169,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -304,11 +205,28 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/B-linh-tinh-lock/B-linh-tinh-lock.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/alpha-store/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1480945490289" expanded="true" signature="2387:2405" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -316,7 +234,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -324,10 +241,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#125#0#PHP" expanded="true" />
-            <marker date="1480945441190" expanded="true" signature="-1:-1" placeholder="SELECT ID FR..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -335,40 +248,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2868" column="49" selection-start-line="2868" selection-start-column="49" selection-end-line="2868" selection-end-column="49" />
-          <folding>
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="Insert into ..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="Insert into ..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT post_..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT post_..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT ID FR..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT comme..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT meta_..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT comme..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT ID FR..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT post_..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT post_..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT post_..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT pinge..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT pinge..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT to_pi..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT ID FR..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT ID, p..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT ID FR..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT ID FR..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT comme..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT meta_..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT meta_..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT post_..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT post_..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT DATE_..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT ID FR..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT ${$wp..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -384,7 +264,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -392,7 +271,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -400,7 +278,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -408,7 +285,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -424,7 +300,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="20.923077">
           <caret line="25" column="2" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -432,7 +307,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -440,40 +314,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.461538">
           <caret line="2868" column="49" selection-start-line="2868" selection-start-column="49" selection-end-line="2868" selection-end-column="49" />
-          <folding>
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="Insert into ..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="Insert into ..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT post_..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT post_..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT ID FR..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT comme..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT meta_..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT comme..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT ID FR..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT post_..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT post_..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT post_..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT pinge..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT pinge..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT to_pi..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT ID FR..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT ID, p..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT ID FR..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT ID FR..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT comme..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT meta_..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT meta_..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT post_..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT post_..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT DATE_..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT ID FR..." />
-            <marker date="1480945514094" expanded="true" signature="-1:-1" placeholder="SELECT ${$wp..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -481,24 +322,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-17.0">
           <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#125#0#PHP" expanded="true" />
-            <marker date="1480945441190" expanded="true" signature="-1:-1" placeholder="SELECT ID FR..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/plugins/B-linh-tinh-lock/B-linh-tinh-lock.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8461537">
-          <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/alpha-store/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.901894">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <marker date="1480945490289" expanded="true" signature="2387:2405" placeholder="..." />

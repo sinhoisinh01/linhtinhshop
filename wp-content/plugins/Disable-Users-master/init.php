@@ -81,7 +81,17 @@ final class ja_disable_users {
 					</th>
 					<td>
 						<input type="checkbox" name="ja_disable_user" id="ja_disable_user" value="1" <?php checked( 1, get_the_author_meta( 'ja_disable_user', $user->ID ) ); ?> />
+						
 						<span class="description"><?php _e( 'If checked, the user cannot login with this account.' , 'ja_disable_users' ); ?></span>
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<label for="ja_disable_user_des"><?php _e(' Disable message', 'ja_disable_users' ); ?></label>
+					</th>
+					<td>
+						<input type="text" name="ja_disable_user_des" id="ja_disable_user_des" value=" <?php get_the_author_meta('ja_disable_user_des', $user->ID)?> "/>
+						<span class="description"> <?php _e( 'Display a massage for locked user when they try to login'); ?><span>
 					</td>
 				</tr>
 			<tbody>
@@ -105,6 +115,10 @@ final class ja_disable_users {
 			$disabled = 0;
 		} else {
 			$disabled = $_POST['ja_disable_user'];
+		}
+		
+		if ( isset( $_POST['ja_disable_user_des'] ) ) {
+			update_user_meta ($user_id, 'ja_disable_user_des', $_POST['ja_disable_user_des']);
 		}
 	 
 		update_user_meta( $user_id, 'ja_disable_user', $disabled );
@@ -131,14 +145,15 @@ final class ja_disable_users {
 		
 		// Is the use logging in disabled?
 		if ( $disabled == '1' ) {
+			$message = get_user_meta( $user-> ID, 'ja_disable_user_des', false);
 			// Clear cookies, a.k.a log user out
 			wp_clear_auth_cookie();
 
 			// Build login URL and then redirect
-			$login_url = site_url( 'wp-login.php', 'login' );
-			$login_url = add_query_arg( 'disabled', '1', $login_url );
+			// $login_url = site_url( 'wp-login.php', 'login' );
+			// $login_url = add_query_arg( 'disabled', '1', $login_url );
 			$home = get_home_url();			
-			wp_redirect($home . "/my-account/?disabled='1'");
+			wp_redirect($home . "/my-account/?disabled='1'&disable_message=" . $message);
 			exit;
 		}
 	}
@@ -202,8 +217,11 @@ final class ja_disable_users {
 new ja_disable_users();
 // Thêm vào bởi LiSora: đoạn shortcode này dùng để đưa message "your account has been disabled" tới những trang
 // khác với trang wp-login
+// Chèn [Display_Disabled_Message] vào đầu trang login để nó hoạt động
 function Display_Message() {
-	if ( isset( $_GET['disabled'] ) && $_GET['disabled'] == 1 )
-		echo '<b>Your account has been disabled</b>';
+	if ( isset( $_GET['disabled'] ) && $_GET['disabled'] == 1 ) {
+		echo var_dump($_GET['disable_message']);
+		echo '<b>Your account has been disabled. Because: '. $_GET['disable_message'] .'</b>';		
+	}
 }
 add_shortcode('Display_Disabled_Message', 'Display_Message');
