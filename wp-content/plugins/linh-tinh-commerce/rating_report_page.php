@@ -2,8 +2,7 @@
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
 // add bootstrap for wp_admin
-function sinh_add_bootstrap()
-{
+function sinh_add_bootstrap() {
     if ($_GET['page'] == 'user-rating-report') {
         echo '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">\n
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>\n
@@ -11,8 +10,7 @@ function sinh_add_bootstrap()
     }
 }
 
-function bao_add_disable_user_handler()
-{
+function bao_add_disable_user_handler() {
     echo
     '<script>
 		$(document).ready(function(){
@@ -40,13 +38,11 @@ add_action('admin_head', 'sinh_add_bootstrap');
 add_action('admin_head', 'bao_add_disable_user_handler');
 
 // create menu for rating report
-function sinh_rating_report_setup_menu()
-{
+function sinh_rating_report_setup_menu() {
     add_menu_page('User Rating Report', 'User Ratings', 'manage_options', 'user-rating-report', 'sinh_rating_report_page_init', 'dashicons-groups', 70);
 }
 
-function sinh_rating_report_page_init()
-{
+function sinh_rating_report_page_init() {
     $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
     $start_date_of_this_year = mktime(0, 0, 0, date("m"), 1, date("Y"));
 
@@ -71,8 +67,7 @@ function sinh_rating_report_page_init()
 
 add_action('admin_menu', 'sinh_rating_report_setup_menu');
 
-function sinh_get_user_ratings_list()
-{
+function sinh_get_user_ratings_list() {
     $posts = query_posts(array('meta_key' => 'ratings_average', 'orderby' => 'meta_value_num', 'order' => 'ASC'));
     echo '<table class="table">
 	    <thead>
@@ -106,7 +101,7 @@ function sinh_get_user_ratings_list()
             echo '<td> <input type="checkbox" class="checkbox_disable_user" name="disabled" value="' . get_the_author_meta('ID') . '"/>';
         } else {
             echo '<td> <input type="checkbox" class="checkbox_disable_user" name="disabled" value="' . get_the_author_meta('ID') . '" checked/>';
-			echo '<td> ' . get_user_meta(get_the_author_meta('ID'), 'ja_disable_user_des', true) . '</td>'; 
+            echo '<td> ' . get_user_meta(get_the_author_meta('ID'), 'ja_disable_user_des', true) . '</td>';
         }
 
         echo '</tr>';
