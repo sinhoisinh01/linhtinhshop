@@ -145,7 +145,8 @@ final class ja_disable_users {
 		
 		// Is the use logging in disabled?
 		if ( $disabled == '1' ) {
-			$message = get_user_meta( $user-> ID, 'ja_disable_user_des', false);
+			$message = get_user_meta( $user-> ID, 'ja_disable_user_des', true);
+			
 			// Clear cookies, a.k.a log user out
 			wp_clear_auth_cookie();
 
@@ -153,7 +154,7 @@ final class ja_disable_users {
 			// $login_url = site_url( 'wp-login.php', 'login' );
 			// $login_url = add_query_arg( 'disabled', '1', $login_url );
 			$home = get_home_url();			
-			wp_redirect($home . "/my-account/?disabled='1'&disable_message=" . $message);
+			wp_redirect($home . "/my-account/?disabled=1&disable_message=" . str_replace(" ", "+", $message));
 			exit;
 		}
 	}
@@ -215,13 +216,3 @@ final class ja_disable_users {
 	}
 }
 new ja_disable_users();
-// Thêm vào bởi LiSora: đoạn shortcode này dùng để đưa message "your account has been disabled" tới những trang
-// khác với trang wp-login
-// Chèn [Display_Disabled_Message] vào đầu trang login để nó hoạt động
-function Display_Message() {
-	if ( isset( $_GET['disabled'] ) && $_GET['disabled'] == 1 ) {
-		echo var_dump($_GET['disable_message']);
-		echo '<b>Your account has been disabled. Because: '. $_GET['disable_message'] .'</b>';		
-	}
-}
-add_shortcode('Display_Disabled_Message', 'Display_Message');

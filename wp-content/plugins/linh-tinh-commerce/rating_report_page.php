@@ -1,5 +1,9 @@
 <?php
-if (!defined('ABSPATH')) exit; // Exit if accessed directly
+//if (!defined('ABSPATH')) exit; // Exit if accessed directly
+
+if ( isset( $_REQUEST["disable"] ) && isset( $_REQUEST["user_lock_id"] ) && isset( $_REQUEST["message"] ) ) {
+	require_once( myplugin_plugin_path() . '/user-disable.php' );
+}
 
 // add bootstrap for wp_admin
 function sinh_add_bootstrap() {
@@ -11,27 +15,29 @@ function sinh_add_bootstrap() {
 }
 
 function bao_add_disable_user_handler() {
-    echo
-    '<script>
-		$(document).ready(function(){
-			$(".checkbox_disable_user").change(function() {
-				var id = this.value;
-				if(this.checked) {
-					var message = prompt("Let the user know why him/her is blocked:",
-					"low rating from many others user");
-					if (message != null) {
-						window.location.href = "./user-disable.php?id=" + id + "&message="+message+"&disable=true"
+    if ( $_GET["page"] == 'user-rating-report' ) {
+		echo
+		'<script>
+			$(document).ready(function(){
+				$(".checkbox_disable_user").change(function() {
+					var id = this.value;
+					if(this.checked) {
+						var message = prompt("Let the user know why him/her is blocked:",
+						"low rating from many others user");
+						if (message != null) {
+							window.location.href = "' . "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" . '&user_lock_id=" + id + "&message="+message+"&disable=true"
+						} else {
+							this.checked = !this.checked;
+						}
 					} else {
-						this.checked = !this.checked;
+						window.location.href = "' . "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" . '&user_lock_id=" + id + "&message="+ " " +"&disable=false"
 					}
-				} else {
-					window.location.href = "./user-disable.php?id=" + id + "&message="+ " " +"&disable=false"
-				}
+				})
 			})
-		})
-//		$("").load("user-disable.php/?id=" + id + "&message="+message+"&disable=true");
-//		$("").load("user-disable.php/?id=" + id + "&message="+ " " + "&disable=false");
-	</script>';
+	//		$("").load("user-disable.php/?id=" + id + "&message="+message+"&disable=true");
+	//		$("").load("user-disable.php/?id=" + id + "&message="+ " " + "&disable=false");
+		</script>';
+	}
 }
 
 add_action('admin_head', 'sinh_add_bootstrap');
@@ -69,12 +75,12 @@ add_action('admin_menu', 'sinh_rating_report_setup_menu');
 
 function sinh_get_user_ratings_list() {
     $posts = query_posts(array('meta_key' => 'ratings_average', 'orderby' => 'meta_value_num', 'order' => 'ASC'));
-    echo '<table class="table">
+    echo '</br>';
+	echo '<table class="table">
 	    <thead>
 	      <tr>
 	        <th>No.</th>
 	        <th>Name</th>
-	        <th>Score</th>
 	        <th>Votes</th>
 	        <th>Average</th>
 			<th>Disable</th>
@@ -94,11 +100,11 @@ function sinh_get_user_ratings_list() {
             . get_the_author()
             . '</a>
 	        </td>
-	        <td>' . $post_meta['ratings_score'][0] . '/5</td>
 	        <td>by ' . number_format($post_meta['ratings_users'][0]) . ' users</td>
-	        <td>' . $post_meta['ratings_average'][0] . '</td>';
+	        <td>' . $post_meta['ratings_average'][0] . '/5</td>';
         if ($disabled == 0) {
             echo '<td> <input type="checkbox" class="checkbox_disable_user" name="disabled" value="' . get_the_author_meta('ID') . '"/>';
+			echo '<td></td>';
         } else {
             echo '<td> <input type="checkbox" class="checkbox_disable_user" name="disabled" value="' . get_the_author_meta('ID') . '" checked/>';
             echo '<td> ' . get_user_meta(get_the_author_meta('ID'), 'ja_disable_user_des', true) . '</td>';

@@ -122,4 +122,16 @@ function Woo_Sinh_Marketplace_load() {
 add_action( 'plugins_loaded', 'Woo_Sinh_Marketplace_load' );
 add_shortcode( 'sinh_view_rating', array('Woo_Sinh_Marketplace', 'sinh_create_view_ratings_shortcode') );
 
+// Thêm vào bởi LiSora: đoạn shortcode này dùng để đưa message "your account has been disabled" tới những trang
+// khác với trang wp-login
+// Chèn [Display_Disabled_Message] vào đầu trang login để nó hoạt động
+function Display_Message() {
+	if ( isset( $_GET['disabled'] ) && $_GET['disabled'] == 1 ) {
+	
+		
+		echo '<b>Your account has been disabled. Because: '. str_replace("+", " " , $_GET['disable_message']) .'</b>';		
+	}
+}
+add_shortcode('Display_Disabled_Message', 'Display_Message');
+
 require_once( linh_tinh_commerce_dir . 'orders_information.php' );
