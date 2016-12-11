@@ -1,12 +1,12 @@
 === WP-PostRatings ===
 Contributors: GamerZ  
-Donate link: http://lesterchan.net/site/donation/  
+Donate link: https://lesterchan.net/site/donation/  
 Tags: ratings, rating, postratings, postrating, vote, digg, ajax, post  
-Requires at least: 2.8  
-Tested up to: 4.5  
-Stable tag: 1.83.2  
+Requires at least: 4.0  
+Tested up to: 4.7  
+Stable tag: 1.84  
 
-Adds an AJAX rating system for your WordPress blog's post/page.
+Adds an AJAX rating system for your WordPress site's content.
 
 == Description ==
 
@@ -27,6 +27,30 @@ Adds an AJAX rating system for your WordPress blog's post/page.
 I spent most of my free time creating, updating, maintaining and supporting these plugins, if you really love my plugins and could spare me a couple of bucks, I will really appreciate it. If not feel free to use it without any obligations.
 
 == Changelog ==
+= Version 1.84 =
+* NEW: Added '%POST_THUMBNAIL%' Template variable.
+* NEW: Added 'wp_postratings_cookie_expiration' filter. Props @ramiy.
+* NEW: Added 'wp_postratings_ratings_image_alt' filter
+* NEW: Added more meta itemprops to pass Structured Data Testing Tool test
+* NEW: Remove po/mo files from the plugin. Props @ramiy.
+* NEW: Use translate.wordpress.org to translate the plugin. Props @ramiy.
+* NEW: Add phpDocs and update file headers. Props @ramiy.
+* NEW: Adds the ability to restrict voting rights to members of the blog. Props @stephenharris.
+* FIXED: Use the new admin headings hierarchy with H1, H2, H3 tags. Props @ramiy.
+* FIXED: Move *.js files to /js/ sub-folder. Props @ramiy.
+* FIXED: Move *.css files to /css/ sub-folder. Props @ramiy.
+* FIXED: Move the scripts to a separate file in /includes/ sub-folder. Props @ramiy.
+* FIXED: Move the widget to a separate file in /includes/ sub-folder. Props @ramiy.
+* FIXED: Move the shortcode to a separate file in /includes/ sub-folder. Props @ramiy.
+* FIXED: Move activation hooks to a separate file in /includes/ sub-folder. Props @ramiy.
+* FIXED: Move admin functions and hooks to a separate file in /includes/ sub-folder. Props @ramiy.
+* FIXED: Move the i18n load to a separate file in /includes/ sub-folder. Props @ramiy.
+* FIXED: Replace die() with wp_die() and add i18n to the strings. Props @ramiy.
+* FIXED: Update translation strings to avoid using 'post' as the post type. Props @ramiy.
+* FIXED: Minor translation string fix. Props @ramiy.
+* FIXED: Update rating widget. Props @ramiy.
+* FIXED: Security hardening. Props @stephenharris.
+
 = Version 1.83.2 =
 * FIXED: Unauthenticated blind SQL injection in ratings_most_orderby(). Props @Ben Bidner from Automattic.
 
@@ -34,14 +58,14 @@ I spent most of my free time creating, updating, maintaining and supporting thes
 * FIXED: Remove No Results template from the_ratings_results()
 
 = Version 1.83 =
-* NEW: Added 'wp_postratings_display_comment_author_ratings' filter
+* NEW: Added 'wp_postratings_display_comment_author_ratings' filter. Props @ramiy.
 * FIXED: Removing Loading ... because SERP will index the text if the ratings is at the top of the article
-* FIXED: Move wp_postratings_image_extension filter to init()
+* FIXED: Move 'wp_postratings_image_extension' filter to init()
 * FIXED: Show headline, datePublished and image despite there is no ratings
 * FIXED: Show post without ratings as well when sorting is done in URL. Props @talljosh.
 
 = Version 1.82 =
-* NEW: Added 'wp_postratings_image_extension' filter
+* NEW: Added 'wp_postratings_image_extension' filter. Props @ramiy.
 * FIXED: Added headline, datePublished, image to Article Schema type
 * FIXED: Deprecated PHP4 constructor in WordPress 4.3
 * FIXED: Remove schema code when Rich Snippets is off
@@ -326,9 +350,30 @@ N/A
 * The default schema type is 'Article', if you want to change it to 'Recipe', you need to make use of the `wp_postratings_schema_itemtype` filter as shown in the sample code below:
 <code>
 <?php  
-add_filter('wp_postratings_schema_itemtype', 'wp_postratings_schema_itemtype');  
-function wp_postratings_schema_itemtype($itemtype) {  
+add_filter( 'wp_postratings_schema_itemtype', 'wp_postratings_schema_itemtype' );  
+function wp_postratings_schema_itemtype( $itemtype ) {  
 	return 'itemscope itemtype="http://schema.org/Recipe"';  
+}  
+?>
+</code>
+
+= How To Add Your Site Logo For Google Rich Snippets =
+* By default, the plugin will use your site header image URL as your site logo. If you want to change it, you need to make use of the `wp_postratings_site_logo` filter as shown in the sample code below:
+<code>
+<?php  
+add_filter( 'wp_postratings_site_logo', 'wp_postratings_site_logo' );  
+function wp_postratings_site_logo( $url ) {  
+	return 'http://placehold.it/350/150.png';  
+}  
+?>
+</code>
+
+= How To Remove Ratings Image alt and title Text? =
+<code>
+<?php  
+add_filter( 'wp_postratings_ratings_image_alt', 'wp_postratings_ratings_image_alt' );  
+function wp_postratings_ratings_image_alt( $alt_title_text ) {  
+	return '';  
 }  
 ?>
 </code>
@@ -336,10 +381,7 @@ function wp_postratings_schema_itemtype($itemtype) {
 = How To Display Comment Author Ratings? =
 * By default, the comment author ratings are not displayed. If you want to display the ratings, you need to make use of the `wp_postratings_display_comment_author_ratings` filter as shown in the sample code below:
 <code>
-function custom_display_comment_author_ratings() {
-    return true;
-}
-add_filter( 'wp_postratings_display_comment_author_ratings', 'custom_display_comment_author_ratings' );
+add_filter( 'wp_postratings_display_comment_author_ratings', '__return_true' );
 </code>
 
 = How To use PNG images instead of GIF images? =
@@ -351,8 +393,17 @@ function custom_rating_image_extension() {
 add_filter( 'wp_postratings_image_extension', 'custom_rating_image_extension' );
 </code>
 
+= How To change the cookie expiration time? =
+* The default cookie expiration if 'time() + 30000000', if you want to change the lenght of the experation, you need to make use of the `wp_postratings_cookie_expiration` filter as shown in the sample code below:
+<code>
+function custom_rating_cookie_expiration() {
+	return strtotime( 'tomorrow' ) ;
+}
+add_filter( 'wp_postratings_cookie_expiration', 'custom_rating_cookie_expiration', 10, 0 );
+</code>
+
 = How Does WP-PostRatings Load CSS? =
-* WP-PostRatings will load `postratings-css.css` from your theme's directory if it exists.
+* WP-PostRatings will load `postratings-css.css` from your theme's CSS directory if it exists.
 * If it doesn't exists, it will just load the default 'postratings-css.css' that comes with WP-PostRatings.
 * This will allow you to upgrade WP-PostRatings without worrying about overwriting your ratings styles that you have created.
 
